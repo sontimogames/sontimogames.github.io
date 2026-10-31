@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sontimo Games</title>
+<meta name="description" content="Sontimo Games: Car Maker Tycoon ve Bus Terminal Tycoon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Fredoka:wght@600&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; }
+html { background: #F3EBD8; }
+body {
+  margin: 0;
+  background: #F3EBD8;
+  color: #0A5E66;
+  font-family: "Atkinson Hyperlegible", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+.sahne {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 136px 40px 64px;
+}
+#pist {
+  position: absolute;
+  left: 0; top: 0;
+  pointer-events: none;
+  display: block;
+}
+.ust, main, footer { position: relative; }
+.ust {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 48px;
+  max-width: 1144px;
+  margin-right: -104px;
+}
+h1, h2 {
+  font-family: "Fredoka", system-ui, sans-serif;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.1;
+}
+h1 { font-size: 40px; }
+h2 { font-size: 56px; margin-bottom: 16px; }
+.dil { display: flex; align-items: center; font-size: 16px; }
+.dil button {
+  font: inherit;
+  font-weight: 400;
+  color: #0A5E66;
+  background: none;
+  border: 0;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0 6px;
+  cursor: pointer;
+}
+.dil button[aria-pressed="true"] { font-weight: 700; }
+.dil button:active, footer a:active { transform: translateY(2px); }
+a:focus-visible, button:focus-visible { outline: 3px solid #11A2B1; outline-offset: 2px; }
+
+main { max-width: 1040px; }
+.durak1 { margin-top: 152px; }
+.kareler {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 230px));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.kareler figure { margin: 0; }
+.kareler img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 6px;
+}
+/* tam simetriyi kırmak için tek kare eğik */
+.kareler .egik img { transform: rotate(3deg); }
+.durak1 p { margin: 0 0 20px; max-width: 760px; }
+.durum { display: flex; align-items: center; gap: 10px; font-size: 16px; }
+.durum i { width: 10px; height: 10px; flex: none; background: #8DD95A; }
+.durak2 .durum i { background: #11A2B1; }
+.durak2 { margin-top: 176px; margin-left: 88px; }
+
+footer { margin-top: 120px; font-size: 14px; }
+footer a { display: inline-block; color: #0A5E66; text-decoration: underline; text-underline-offset: 3px; }
+footer .ara { padding: 0 8px; }
+
+@media (max-width: 719px) {
+  body { font-size: 17px; }
+  .sahne { padding: 0 16px 32px 16px; }
+  .ust { padding-top: 20px; margin-right: 0; }
+  h1 { font-size: 28px; }
+  h2 { font-size: 36px; margin-bottom: 12px; }
+  main { padding-left: 56px; }
+  .durak1 { margin-top: 56px; }
+  .kareler { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .durak2 { margin-top: 72px; margin-left: 0; }
+  footer { margin-top: 112px; }
+  footer .son { display: none; }
+  footer .telif { display: block; margin-top: 6px; }
+}
+</style>
+</head>
+<body>
+<div class="sahne" id="sahne">
+  <svg id="pist" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"></svg>
+
+  <header class="ust">
+    <h1>Sontimo Games</h1>
+    <div class="dil" role="group" aria-label="Dil / Language">
+      <button type="button" data-dil="tr" aria-pressed="true">TR</button><span aria-hidden="true">|</span><button type="button" data-dil="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <main id="icerik">
+    <section class="durak1" id="durak1">
+      <div class="kareler" id="kareler">
+        <figure><img src="gorsel/carmaker/01_ana_ekran.png" data-alt-tr="Car Maker Tycoon ana ekran" data-alt-en="Car Maker Tycoon main screen" alt="Car Maker Tycoon ana ekran"></figure>
+        <figure><img src="gorsel/carmaker/02_tasarim.png" data-alt-tr="Car Maker Tycoon tasarım ekranı" data-alt-en="Car Maker Tycoon design screen" alt="Car Maker Tycoon tasarım ekranı"></figure>
+        <figure class="egik"><img src="gorsel/carmaker/03_test.png" data-alt-tr="Car Maker Tycoon test ekranı" data-alt-en="Car Maker Tycoon test screen" alt="Car Maker Tycoon test ekranı"></figure>
+        <figure><img src="gorsel/carmaker/04_siparis.png" data-alt-tr="Car Maker Tycoon sipariş ekranı" data-alt-en="Car Maker Tycoon order screen" alt="Car Maker Tycoon sipariş ekranı"></figure>
+      </div>
+      <h2>Car Maker Tycoon</h2>
+      <p data-tr="Telefon için araba şirketi oyunu. Oyuncu arabayı tasarlar (iskelet, sac, yay, motor, vites, görünüş), 4 testten geçirir (rulo, fren, viraj, çarpışma), üretim bandına koyar ve siparişe ya da pazara satar. Kazandığı parayla kat ve bina büyütür; motosiklet de üretilebilir."
+         data-en="A car company game for phones. The player designs a car (frame, body panels, springs, engine, gearbox, looks), puts it through 4 tests (rollover, braking, cornering, crash), places it on the production line and sells it to an order or to the market. The money goes into more floors and buildings. Motorcycles can be built too.">Telefon için araba şirketi oyunu. Oyuncu arabayı tasarlar (iskelet, sac, yay, motor, vites, görünüş), 4 testten geçirir (rulo, fren, viraj, çarpışma), üretim bandına koyar ve siparişe ya da pazara satar. Kazandığı parayla kat ve bina büyütür; motosiklet de üretilebilir.</p>
+      <div class="durum"><i></i><span data-tr="Kapalı teste hazırlanıyor" data-en="Preparing for closed testing">Kapalı teste hazırlanıyor</span></div>
+    </section>
+
+    <section class="durak2" id="durak2">
+      <h2 id="otogar">Bus Terminal Tycoon</h2>
+      <div class="durum"><i></i><span data-tr="Yapımda" data-en="In development">Yapımda</span></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="privacy.html" data-tr="Gizlilik politikası" data-en="Privacy policy">Gizlilik politikası</a><span class="ara">·</span><a href="mailto:sontimo000222666xx@gmail.com">sontimo000222666xx@gmail.com</a><span class="ara son">·</span><span class="telif">© 2026 Sontimo Games</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var KEY = "sontimo-dil";
+  function oku() {
+    try { var v = localStorage.getItem(KEY); if (v === "tr" || v === "en") return v; } catch (e) {}
+    var n = (navigator.language || "en").toLowerCase();
+    return n.indexOf("tr") === 0 ? "tr" : "en";
+  }
+  function yaz(d) { try { localStorage.setItem(KEY, d); } catch (e) {} }
+  function uygula(d) {
+    document.documentElement.lang = d;
+    document.querySelectorAll("[data-tr]").forEach(function (el) { el.textContent = el.getAttribute("data-" + d); });
+    document.querySelectorAll("img[data-alt-tr]").forEach(function (el) { el.alt = el.getAttribute("data-alt-" + d); });
+    document.querySelectorAll(".dil button").forEach(function (b) { b.setAttribute("aria-pressed", b.getAttribute("data-dil") === d ? "true" : "false"); });
+  }
+  document.querySelectorAll(".dil button").forEach(function (b) {
+    b.addEventListener("click", function () { var d = b.getAttribute("data-dil"); yaz(d); uygula(d); });
+  });
+  uygula(oku());
+
+  var kap = document.getElementById("kareler");
+  function bosMu() { if (!kap.querySelector("figure")) kap.style.display = "none"; }
+  kap.querySelectorAll("img").forEach(function (img) {
+    function gizle() { var f = img.closest("figure"); if (f) f.remove(); bosMu(); }
+    img.addEventListener("error", gizle);
+    if (img.complete && img.naturalWidth === 0) gizle();
+  });
+
+  var NS = "http://www.w3.org/2000/svg";
+  var PETROL = "#0A5E66", TURKUAZ = "#11A2B1";
+  var sahne = document.getElementById("sahne");
+  var svg = document.getElementById("pist");
+  var icerik = document.getElementById("icerik");
+  var d1 = document.getElementById("durak1");
+  var d2 = document.getElementById("durak2");
+  var otogar = document.getElementById("otogar");
+  var ust = document.querySelector(".ust");
+  var dar = window.matchMedia("(max-width: 719px)");
+
+  function el(ad, at, ana) {
+    var e = document.createElementNS(NS, ad);
+    for (var k in at) e.setAttribute(k, at[k]);
+    if (ana) ana.appendChild(e);
+    return e;
+  }
+  function serit(g, d, W, ince) {
+    el("path", { d: d, stroke: PETROL, "stroke-width": W + 6 }, g);
+    el("path", { d: d, stroke: TURKUAZ, "stroke-width": W }, g);
+    el("path", { d: d, stroke: "#FFFFFF", "stroke-width": ince ? 2 : 3, "stroke-dasharray": ince ? "10 9" : "14 12" }, g);
+  }
+  function aci(yol, s) {
+    var a = yol.getPointAtLength(Math.max(0, s - 0.5)), b = yol.getPointAtLength(s + 0.5);
+    return Math.atan2(b.y - a.y, b.x - a.x);
+  }
+  function derece(r) { return r * 180 / Math.PI; }
+
+  function araba(g) {
+    el("rect", { x: -35, y: -18, width: 70, height: 36, rx: 11, fill: "#E7D22A", stroke: PETROL, "stroke-width": 2.5 }, g);
+    el("rect", { x: 3, y: -22, width: 5, height: 4, fill: "#E7D22A", stroke: PETROL, "stroke-width": 1.5 }, g);
+    el("rect", { x: 3, y: 18, width: 5, height: 4, fill: "#E7D22A", stroke: PETROL, "stroke-width": 1.5 }, g);
+    el("path", { d: "M6 -14 L17 -12 Q19.5 0 17 12 L6 14 Z", fill: "#163A40" }, g);
+    el("path", { d: "M-28 -12 L-21 -14 L-21 14 L-28 12 Z", fill: "#163A40" }, g);
+    el("rect", { x: -18, y: -17, width: 21, height: 3, fill: "#163A40" }, g);
+    el("rect", { x: -18, y: 14, width: 21, height: 3, fill: "#163A40" }, g);
+    el("rect", { x: 30, y: -14, width: 3, height: 7, fill: "#F3EBD8" }, g);
+    el("rect", { x: 30, y: 7, width: 3, height: 7, fill: "#F3EBD8" }, g);
+  }
+
+  function ciz() {
+    var sr = sahne.getBoundingClientRect();
+    function r(e) {
+      var b = e.getBoundingClientRect();
+      return { l: b.left - sr.left, t: b.top - sr.top, r: b.right - sr.left, b: b.bottom - sr.top, cy: (b.top + b.bottom) / 2 - sr.top };
+    }
+    var w = sahne.clientWidth, h = sahne.offsetHeight;
+    svg.setAttribute("width", w);
+    svg.setAttribute("height", h);
+    svg.setAttribute("viewBox", "0 0 " + w + " " + h);
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    var tel = dar.matches;
+    var m = r(icerik), a = r(d1), b = r(d2), bt = r(otogar), hd = r(ust);
+    var W, d, adim, sAraba, olcek, tab;
+    if (!tel) {
+      W = 64; adim = 160; olcek = 1; tab = 9;
+      var R = 96, R2 = 56;
+      var y0 = a.t - 56, xr = m.r + 72, yb = a.b + 88, xl = m.l + 24;
+      var yS = Math.max(bt.cy - 7, yb + R2 + 8);
+      d = "M-10 " + y0 + " H" + (xr - R) + " A" + R + " " + R + " 0 0 1 " + xr + " " + (y0 + R) +
+          " V" + (yb - R) + " A" + R + " " + R + " 0 0 1 " + (xr - R) + " " + yb +
+          " H" + (xl + R2) + " A" + R2 + " " + R2 + " 0 0 0 " + xl + " " + (yb + R2) + " V" + yS;
+      sAraba = 270;
+    } else {
+      W = 40; adim = 100; olcek = 0.62; tab = 6;
+      var Rm = 36, xm = m.l + 20, y1 = hd.b + 20;
+      var yS2 = Math.max(b.b + 41, y1 + Rm + 40);
+      d = "M-10 " + y1 + " H" + (xm - Rm) + " A" + Rm + " " + Rm + " 0 0 1 " + xm + " " + (y1 + Rm) + " V" + yS2;
+      sAraba = 10 + (xm - Rm) + Rm * Math.PI / 2 + 40;
+    }
+
+    var g = el("g", { fill: "none" }, svg);
+    serit(g, d, W, tel);
+    var yol = g.children[1];
+    var toplam = yol.getTotalLength();
+    var ekler = [];
+    for (var s = 10 + adim; s < toplam - 30; s += adim) ekler.push(s);
+
+    /* elle yere kurulmuş pist hiç kusursuz durmaz: düz kısımdaki bir parça 2 px kayık */
+    for (var k = 0; k + 1 < ekler.length; k++) {
+      var s1 = ekler[k], s2 = ekler[k + 1];
+      if (s1 < 300 && !tel) continue;
+      var a1 = aci(yol, s1 + 2), a2 = aci(yol, s2 - 2), am = aci(yol, (s1 + s2) / 2);
+      if (Math.abs(a1 - a2) < 0.001 && Math.abs(a1 - am) < 0.001) {
+        var p1 = yol.getPointAtLength(s1), p2 = yol.getPointAtLength(s2);
+        var nx = -Math.sin(a1) * 2, ny = Math.cos(a1) * 2;
+        serit(el("g", { transform: "translate(" + nx + " " + ny + ")" }, g), "M" + p1.x + " " + p1.y + " L" + p2.x + " " + p2.y, W, tel);
+        break;
+      }
+    }
+
+    var yw = W / 2 + 3;
+    ekler.forEach(function (s) {
+      var p = yol.getPointAtLength(s);
+      var e = el("g", { transform: "translate(" + p.x + " " + p.y + ") rotate(" + derece(aci(yol, s)) + ")" }, g);
+      el("path", { d: "M0 " + (-tab) + " A" + tab + " " + tab + " 0 0 1 0 " + tab + " Z", fill: TURKUAZ }, e);
+      el("path", { d: "M0 " + (-yw) + " V" + (-tab) + " A" + tab + " " + tab + " 0 0 1 0 " + tab + " V" + yw, stroke: PETROL, "stroke-width": 2.5 }, e);
+    });
+
+    var pa = yol.getPointAtLength(sAraba);
+    araba(el("g", { transform: "translate(" + pa.x + " " + pa.y + ") rotate(" + derece(aci(yol, sAraba)) + ") scale(" + olcek + ")" }, svg));
+
+    var pt = yol.getPointAtLength(toplam);
+    var tg = el("g", { transform: "translate(" + pt.x + " " + pt.y + ") rotate(" + derece(aci(yol, toplam - 1)) + ")" }, svg);
+    var yy = W / 2 + 8;
+    el("rect", { x: -4, y: -yy, width: 22, height: 2 * yy, rx: 4, fill: "#D9572B", stroke: PETROL, "stroke-width": 3 }, tg);
+    el("circle", { cx: 7, cy: -W / 4, r: 2.5, fill: PETROL }, tg);
+    el("circle", { cx: 7, cy: W / 4, r: 2.5, fill: PETROL }, tg);
+  }
+
+  var bekliyor = false;
+  function istek() {
+    if (bekliyor) return;
+    bekliyor = true;
+    requestAnimationFrame(function () { bekliyor = false; ciz(); });
+  }
+  if (window.ResizeObserver) {
+    var ro = new ResizeObserver(istek);
+    ro.observe(sahne); ro.observe(d1); ro.observe(icerik);
+  }
+  window.addEventListener("resize", istek);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(istek);
+  window.addEventListener("load", istek);
+  istek();
+})();
+</script>
+</body>
+</html>
